@@ -1,0 +1,73 @@
+:root {
+  --margin-items: 15px;
+  --font-size-header: 1.5rem;
+}
+
+header {
+  height: 100vh;
+  background-color: black;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.container .logo {
+  justify-self: left;
+  grid-column: 1 / 7;
+  margin: 0;
+}
+
+.container .logo img {
+  display: block;
+  margin: var(--margin-items) 0;
+}
+
+.container .navbar {
+  grid-column: 7/13;
+  align-self: center;
+}
+
+.container .navbar button {
+  display: none;
+}
+
+.container .navbar .list {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  align-items: center;
+  margin: 0 var(--margin-items);
+  padding: 0;
+  list-style: none;
+  font-size: var(--font-size-header);
+}
+
+.container .navbar .list li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+header .photo {
+  height: calc(100vh - 150px - 2 * var(--margin-items));
+  background-image: url(../image/Untitled_design.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+header .photo .container {
+  height: calc(100vh - 150px - 2 * var(--margin-items));
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(2 * var(--font-size-header));
+  color: black;
+  gap: var(--margin-items);
+}
+
+.photo .container .barber-icon {
+  width: 150px;
+}
