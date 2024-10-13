@@ -15,6 +15,12 @@ header {
   grid-template-columns: repeat(12, 1fr);
 }
 
+@media (max-width: 992px) {
+  .container {
+    width: 100%;
+  }
+}
+
 .container .logo {
   justify-self: left;
   grid-column: 1 / 7;
@@ -54,7 +60,7 @@ header .photo {
   height: calc(100vh - 150px - 2 * var(--margin-items));
   background-image: url(../image/Untitled_design.png);
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: cover;
 }
 
 header .photo .container {
@@ -70,4 +76,12 @@ header .photo .container {
 
 .photo .container .barber-icon {
   width: 150px;
+}
+
+.photo .container h1 {
+  font-size: clamp(
+    var(--font-size-header),
+    5vw,
+    calc(3 * var(--font-size-header))
+  );
 }
