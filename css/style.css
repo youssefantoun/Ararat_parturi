@@ -51,7 +51,7 @@ header {
   font-size: var(--font-size-header);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .container .navbar {
     position: relative;
     grid-column: 10/13;
