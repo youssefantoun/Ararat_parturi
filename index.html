@@ -58,6 +58,7 @@
             />
           </svg>
         </div>
+        <div id="shadow" onclick="activeList()"></div>
       </section>
     </header>
     <footer>
@@ -67,7 +68,10 @@
     <script>
       function activeList() {
         let navBar = document.getElementById("nav_bar_list");
+        let shadow = document.getElementById("shadow");
         navBar.classList.toggle("active");
+        shadow.classList.toggle("shadow-active");
+        document.body.classList.toggle("noscroll");
       }
     </script>
   </body>
