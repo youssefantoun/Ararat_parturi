@@ -16,14 +16,14 @@
         </div>
         <nav class="navbar">
           <button type="button" onclick="activeList()">
-            <i class="fa-solid fa-bars"></i>
+            <i id="Icon" class="fa-solid fa-bars"></i>
           </button>
           <ul id="nav_bar_list" class="list">
             <li><a href="#" onclick="activeList()">Koti</a></li>
             <li><a href="#hosep" onclick="activeList()">Hosep</a></li>
-            <li><a href="" onclick="activeList()">palvelut</a></li>
+            <li><a href="#palvelu" onclick="activeList()">palvelut</a></li>
             <li><a href="#" onclick="activeList()">kuvat</a></li>
-            <li><a href="#" onclick="activeList()">Yhteyttä</a></li>
+            <li><a href="#yhteytta" onclick="activeList()">Yhteyttä</a></li>
           </ul>
         </nav>
       </div>
@@ -59,9 +59,18 @@
           </svg>
         </div>
         <div id="shadow" onclick="activeList()"></div>
+        <button type="button">
+          <a
+            href="https://varaa.timma.fi/araratparturi?fbclid=IwY2xjawF7IdtleHRuA2FlbQIxMAABHSMbVreQ5cJUbeXjO6Uh1mCqN7ylY83Ua6SUkXKK-emArlR922oqJvu8Mg_aem_LTpCLnCr1Lh9lM777Cb-rA"
+            target="_blank"
+          >
+            Varaa aika</a
+          >
+        </button>
       </section>
     </header>
     <article id="hosep">
+      <h2>HOSEP</h2>
       <div class="container">
         <div class="image">
           <img
@@ -77,10 +86,74 @@
             exercitationem non minus. Lorem ipsum dolor sit amet consectetur
             adipisicing elit. Nisi possimus animi adipisci neque aut nemo magni.
             Quam provident eligendi dolores excepturi nobis nesciunt. Voluptatem
-            doloribus quaerat est minima temporibus eos.
+            doloribus quaerat est minima temporibus eos. Lorem ipsum dolor, sit
+            amet consectetur adipisicing elit. Veniam et hic iusto sed obcaecati
+            officiis, distinctio sequi, laudantium aut nesciunt vel omnis
+            corporis saepe cumque explicabo. Repellendus exercitationem non
+            minus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi
+            possimus animi adipisci neque aut nemo magni. Quam provident
+            eligendi dolores excepturi nobis nesciunt. Voluptatem doloribus
+            quaerat est minima temporibus eos. Lorem ipsum dolor, sit amet
+            consectetur adipisicing elit. Veniam et hic iusto sed obcaecati
+            officiis, distinctio sequi, laudantium aut nesciunt vel omnis
+            corporis saepe cumque explicabo. Repellendus exercitationem non
+            minus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi
+            possimus animi adipisci neque aut nemo magni. Quam provident
+            eligendi dolores excepturi nobis nesciunt. Voluptatem doloribus
+            quaerat est minima temporibus eos.
           </p>
         </div>
       </div>
+    </article>
+    <article id="palvelu">
+      <h2>Palvelut</h2>
+      <div class="container">
+        <section class="card">
+          <h2 class="service">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </h2>
+          <p>25 <span>&#8364;</span></p>
+        </section>
+        <section class="card">
+          <h2 class="service">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </h2>
+          <p>5 <span>&#8364;</span></p>
+        </section>
+        <section class="card">
+          <h2 class="service">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </h2>
+          <p>20 <span>&#8364;</span></p>
+        </section>
+        <section class="card">
+          <h2 class="service">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </h2>
+          <p>20 <span>&#8364;</span></p>
+        </section>
+        <section class="card">
+          <h2 class="service">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </h2>
+          <p>20 <span>&#8364;</span></p>
+        </section>
+        <section class="card">
+          <h2 class="service">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </h2>
+          <p>20 <span>&#8364;</span></p>
+        </section>
+        <section class="card">
+          <h2 class="service">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </h2>
+          <p>20 <span>&#8364;</span></p>
+        </section>
+      </div>
+    </article>
+    <article id="#yhteytta">
+      <div class="container"></div>
     </article>
     <footer>
       <div class="container"></div>
@@ -90,9 +163,13 @@
       function activeList() {
         let navBar = document.getElementById("nav_bar_list");
         let shadow = document.getElementById("shadow");
+        let Icon = document.getElementById("Icon");
         navBar.classList.toggle("active");
         shadow.classList.toggle("shadow-active");
         document.body.classList.toggle("noscroll");
+        if (Icon.className === "fa-solid fa-bars")
+          Icon.className = "fa-solid fa-xmark";
+        else Icon.className = "fa-solid fa-bars";
       }
     </script>
   </body>
