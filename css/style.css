@@ -283,8 +283,19 @@ header .photo .container {
   box-shadow: 10px 10px 20px black;
 }
 
+#palvelu .container .info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: var(--margin-items) 0;
+  width: 75%;
+  color: #fff;
+  text-align: center;
+}
+
 #palvelu .container .card p,
-#palvelu .container .card h2 {
+#palvelu .container .card h2,
+#palvelu .container .info h2 {
   padding: 0;
   margin: var(--margin-items) 0;
   width: fit-content;
