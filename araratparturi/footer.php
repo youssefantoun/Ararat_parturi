@@ -6,6 +6,10 @@
     </footer>
     <?php wp_footer(); ?>
     <script>
+      const aList = document.querySelectorAll('[aria-current= "page"]')
+      for(let i = 0 ; i < aList.length ; i++) {
+        aList[i].addEventListener("click", activeList)
+      }
       function activeList() {
         let navBar = document.getElementById("nav_bar_list");
         let shadow = document.getElementById("shadow");
